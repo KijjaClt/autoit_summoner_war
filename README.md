@@ -1,1 +1,1 @@
-# autoit_summoner_war
+# AutoIt Bot Summoner War
