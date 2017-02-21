@@ -13,7 +13,6 @@
 #include <ImageSearch.au3>
 
 Global $APP_NAME = "Nox App Player"
-Global $bPaused
 
 Func _Click($x, $y)
    WinActivate($APP_NAME)
@@ -24,19 +23,31 @@ Func _SpeedClick($x, $y)
    MouseClick("left", $x, $y, 1, 1)
 EndFunc
 
-Func _FindQuestion()
+Func _FindImageEnergyRunsOut()
    WinActivate($APP_NAME)
-   $answer = _FindImage(0, 0, 1023, 767,"energy_runs_out.png",125)
-	  ConsoleWrite("Energy low!!"+@CRLF)
-	  While $answer[0] <> -1
+   $result = ImageSearch("energy_runs_out.png")
+   If $result > 0 Then
+	  While $result > 0
+		 ConsoleWrite("Energy low!!"+@CRLF)
 		 _Click(588, 443)
 		 Sleep(60000)
 		 _Click(310, 403)
 		 Sleep(1000)
-		 WinActivate($APP_NAME)
-		 $answer = _FindImage(0, 0, 1023, 767,"energy_runs_out.png",125)
-		 ConsoleWrite("Energy low!!"+@CRLF)
+		 $result = ImageSearch("energy_runs_out.png")
 	  WEnd
+   EndIf
+EndFunc
+
+Func _FindImageConnectionLoss()
+   WinActivate($APP_NAME)
+   $result = ImageSearch("connection_loss.png")
+   If $result > 0 Then
+	  While $result > 0
+		 ConsoleWrite("Connection loss!!"+@CRLF)
+		 _Click(400, 441)
+		 $result = ImageSearch("connection_loss.png")
+	  WEnd
+   EndIf
 EndFunc
 
 Func _Terminate()

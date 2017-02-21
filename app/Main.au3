@@ -11,22 +11,14 @@
 ; Script Start - Add your code below here
 
 #include <Function.au3>
-#include <ImageSearch.au3>
 
-HotKeySet("{P}", "_TogglePause")
 HotKeySet("{ESC}", "_Terminate")
 
 If WinActivate($APP_NAME) Then
    While 1
 	  _Click(812, 531)
 
-	  $answer = _FindImage(0, 0, 1023, 767,"connection_loss.png",100)
-	  ConsoleWrite("Connection loss!!"+@CRLF)
-	  While $answer[0] <> -1
-		 _Click(400, 441)
-		 $answer = _FindImage(0, 0, 1023, 767,"connection_loss.png",100)
-		 ConsoleWrite("Connection loss!!"+@CRLF)
-	  WEnd
+	  _FindImageConnectionLoss()
 
 	  Sleep(70000)
 	  _Click(492, 383)
@@ -40,7 +32,7 @@ If WinActivate($APP_NAME) Then
 	  _Click(310, 403)
 	  Sleep(1000)
 
-	  _FindQuestion()
+	  _FindImageEnergyRunsOut()
 
    WEnd
 EndIf
