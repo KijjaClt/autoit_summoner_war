@@ -17,14 +17,14 @@ While 1
 
 	  Case $idBtn
 		 If WinActivate($APP_NAME) Then
-			_SpeedClick(724, 253)
+			_Click(724, 253)
 			For $i = 1 To GUICtrlRead($idInput) Step +1
-			   _SpeedClick(295, 608)
-			   Sleep(1000)
-			   _SpeedClick(861, 692)
-			   Sleep(1000)
-			   _SpeedClick(757, 557)
-			   Sleep(1000)
+			   _Click(295, 608)
+			   Sleep(500)
+			   _Click(861, 692)
+			   Sleep(500)
+			   _Click(757, 557)
+			   Sleep(500)
 			Next
 			MsgBox($MB_SYSTEMMODAL, "Open Scroll", "Complete!")
 		 EndIf

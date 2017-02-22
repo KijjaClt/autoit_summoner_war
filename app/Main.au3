@@ -16,20 +16,20 @@ HotKeySet("{ESC}", "_Terminate")
 
 If WinActivate($APP_NAME) Then
    While 1
-	  _Click(812, 531)
+	  _Click(775, 496)
+	  Sleep(70000)
 
 	  _FindImageConnectionLoss()
 
-	  Sleep(70000)
-	  _Click(492, 383)
+	  _Click(459, 342)
 	  Sleep(1000)
-	  _Click(492, 383)
+	  _Click(459, 342)
 	  Sleep(1000)
-	  _Click(492, 383)
+	  _Click(459, 342)
 	  Sleep(2000)
-	  _Click(524, 547)
+	  _Click(516, 550)
 	  Sleep(1000)
-	  _Click(310, 403)
+	  _Click(314, 370)
 	  Sleep(1000)
 
 	  _FindImageEnergyRunsOut()

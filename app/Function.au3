@@ -15,8 +15,7 @@
 Global $APP_NAME = "Nox App Player"
 
 Func _Click($x, $y)
-   WinActivate($APP_NAME)
-   MouseClick("left", $x, $y, 1, 5)
+   ControlClick($APP_NAME, "", "", "left", 1, $x, $y)
 EndFunc
 
 Func _SpeedClick($x, $y)
@@ -28,7 +27,6 @@ Func _FindImageEnergyRunsOut()
    $result = ImageSearch("energy_runs_out.png")
    If $result > 0 Then
 	  While $result > 0
-		 ConsoleWrite("Energy low!!"+@CRLF)
 		 _Click(588, 443)
 		 Sleep(60000)
 		 _Click(310, 403)
@@ -43,7 +41,6 @@ Func _FindImageConnectionLoss()
    $result = ImageSearch("connection_loss.png")
    If $result > 0 Then
 	  While $result > 0
-		 ConsoleWrite("Connection loss!!"+@CRLF)
 		 _Click(400, 441)
 		 $result = ImageSearch("connection_loss.png")
 	  WEnd
