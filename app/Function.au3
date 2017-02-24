@@ -24,7 +24,7 @@ EndFunc
 
 Func _FindImageEnergyRunsOut()
    WinActivate($APP_NAME)
-   $result = ImageSearch("energy_runs_out.png")
+   Local $result = ImageSearch("energy_runs_out.png")
    If $result > 0 Then
 	  While $result > 0
 		 _Click(588, 443)
@@ -38,7 +38,7 @@ EndFunc
 
 Func _FindImageConnectionLoss()
    WinActivate($APP_NAME)
-   $result = ImageSearch("connection_loss.png")
+   Local $result = ImageSearch("connection_loss.png")
    If $result > 0 Then
 	  While $result > 0
 		 _Click(400, 441)

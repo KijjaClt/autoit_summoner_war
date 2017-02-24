@@ -27,6 +27,7 @@ If WinActivate($APP_NAME) Then
 	  Sleep(1000)
 	  _Click(459, 342)
 	  Sleep(2000)
+	  _Click(489, 574)
 	  _Click(516, 550)
 	  Sleep(1000)
 	  _Click(314, 370)

@@ -72,12 +72,12 @@ Func _ImageSearchArea($findImage,$resultPosition,$x1,$y1,$right,$bottom, ByRef $
 	If IsString($findImage) Then
 		if $tolerance>0 then $findImage = "*" & $tolerance & " " & $findImage
 		If $HBMP = 0 Then
-			$result = DllCall("..\dll\ImageSearchDLL.dll","str","ImageSearch","int",$x1,"int",$y1,"int",$right,"int",$bottom,"str",$findImage)
+			$result = DllCall(StringTrimRight(@ScriptDir, 4) & "\dll\ImageSearchDLL.dll","str","ImageSearch","int",$x1,"int",$y1,"int",$right,"int",$bottom,"str",$findImage)
 		Else
-			$result = DllCall("..\dll\ImageSearchDLL.dll","str","ImageSearchEx","int",$x1,"int",$y1,"int",$right,"int",$bottom,"str",$findImage,"ptr",$HBMP)
+			$result = DllCall(StringTrimRight(@ScriptDir, 4) & "\dll\ImageSearchDLL.dll","str","ImageSearchEx","int",$x1,"int",$y1,"int",$right,"int",$bottom,"str",$findImage,"ptr",$HBMP)
 		EndIf
 	Else
-		$result = DllCall("..\dll\ImageSearchDLL.dll","str","ImageSearchExt","int",$x1,"int",$y1,"int",$right,"int",$bottom, "int",$tolerance, "ptr",$findImage,"ptr",$HBMP)
+		$result = DllCall(StringTrimRight(@ScriptDir, 4) & "\dll\ImageSearchDLL.dll","str","ImageSearchExt","int",$x1,"int",$y1,"int",$right,"int",$bottom, "int",$tolerance, "ptr",$findImage,"ptr",$HBMP)
 	EndIf
 
 	; If error exit
