@@ -41,8 +41,10 @@ Func _FindImageConnectionLoss()
    Local $result = ImageSearch("connection_loss.png")
    If $result > 0 Then
 	  While $result > 0
-		 _Click(400, 441)
+		 MouseMove($x, $y)
+		 _Click(366, 405)
 		 $result = ImageSearch("connection_loss.png")
+		 Sleep(5000)
 	  WEnd
    EndIf
 EndFunc
