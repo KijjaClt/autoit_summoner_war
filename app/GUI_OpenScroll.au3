@@ -20,11 +20,11 @@ While 1
 			_Click(724, 253)
 			For $i = 1 To GUICtrlRead($idInput) Step +1
 			   _Click(295, 608)
-			   Sleep(500)
+			   Sleep(1000)
 			   _Click(861, 692)
-			   Sleep(500)
+			   Sleep(1000)
 			   _Click(757, 557)
-			   Sleep(500)
+			   Sleep(1000)
 			Next
 			MsgBox($MB_SYSTEMMODAL, "Open Scroll", "Complete!")
 		 EndIf
