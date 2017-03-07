@@ -25,13 +25,9 @@ If WinActivate($APP_NAME) Then
 
 	  Sleep(10000)
 
-	  _FindImageButtonPlay()
-
-	  Sleep(10000)
-
 	  _FindImageConnectionLoss()
 
-	  Sleep(50000)
+	  Sleep(90000)
 
 	  _Click(487, 383)
 	  Sleep(1000)
