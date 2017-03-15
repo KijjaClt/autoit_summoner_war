@@ -27,7 +27,11 @@ If WinActivate($APP_NAME) Then
 
 	  _FindImageConnectionLoss()
 
+;~ 	  Sleep(200000)
 	  Sleep(90000)
+
+	  _Click(644, 469)
+	  Sleep(1000)
 
 	  _Click(487, 383)
 	  Sleep(1000)
