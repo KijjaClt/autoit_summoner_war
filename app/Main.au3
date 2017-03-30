@@ -15,7 +15,6 @@
 HotKeySet("{ESC}", "_Terminate")
 
 If WinActivate($APP_NAME) Then
-;~    _FindImageConnectionLoss()
    While 1
 	  _Click(808, 532)
 
@@ -27,8 +26,7 @@ If WinActivate($APP_NAME) Then
 
 	  _FindImageConnectionLoss()
 
-;~ 	  Sleep(200000)
-	  Sleep(90000)
+	  Sleep(200000)
 
 	  _Click(644, 469)
 	  Sleep(1000)

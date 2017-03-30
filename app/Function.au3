@@ -12,7 +12,7 @@
 
 #include <ImageSearch.au3>
 
-Global $APP_NAME = "Nox App Player"
+Global $APP_NAME = "[CLASS:Qt5QWindowIcon]"
 
 Func _Click($x, $y)
 ;~    ControlClick($APP_NAME, "", "", "left", 1, $x, $y)
